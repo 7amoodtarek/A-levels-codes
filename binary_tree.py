@@ -47,6 +47,30 @@ class Node:
             else:
                 print("Node is not present in the tree")
 
+# Traversals:
+def inorder(root): 
+    # Left -> Root -> Right
+    if root: 
+        inorder(root.left) 
+        print(root.key)
+        inorder(root.right)
+
+
+def preorder(root): 
+    # Root -> Left -> Right
+    if root: 
+        print(root.key)
+        inorder(root.left)
+        inorder(root.right)
+
+
+def postorder(root):
+    if root:
+        # Left -> Right -> Root
+        inorder(root.left)
+        inorder(root.right)
+        print(root.key)
+
 
 root = Node(10)  # we can also set the root node manually
 data = [6, 3, 1, 6, 98, 3, 7]
@@ -71,14 +95,24 @@ try:
         opt = int(input("""
 Choose an option:
 1. Search for a node
-2. exit    
+2. Display nodes
+3. exit    
 > """))
         if opt == 1:
             node = int(input("Enter the node you are looking for: "))
             root.search(node)
         elif opt == 2:
+            t = int(input("1. Inorder, 2. Pre-order, 3. Post-order: "))
+            print("")
+            if t == 1:
+                inorder(root)
+            elif t == 2:
+                preorder(root)
+            elif t == 3:
+                postorder(root)
+        elif opt == 3:
             exit()
         # else:
         #     pass
-except:
-    print("Error")
+except Exception as e:
+    print(e)
