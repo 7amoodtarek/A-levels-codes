@@ -14,8 +14,8 @@ def insertion_sort(arr):
   
 # Below code is just an illustarion for the code runner to see how the function works.
 user_list = []
-try:
-    while True:
+while True:
+    try:
         opt = int(input("""
 Please select an option from below:
 1. Sort elements 'insertion sort'
@@ -33,5 +33,5 @@ Please select an option from below:
             print("Cleared successfully!")
         elif opt == 3:
             exit()
-except:
-    print("Error")
+    except Exception as e:
+        print(e)
