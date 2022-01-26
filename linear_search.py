@@ -13,8 +13,8 @@ def linear_search(arr, e):
 
 # Below code is just an illustarion for the code runner to see how the function works.
 a_list = [3, 1, 6, 98, 7]
-try:
-    while True:
+while True:
+    try:
         opt = int(input("""
 Choose an option:
 1. Search for an element
@@ -25,5 +25,5 @@ Choose an option:
             linear_search(a_list, element)
         elif opt == 2:
             break
-except:
-    print("Error")
+    except Exception as e:
+        print(e)
