@@ -90,8 +90,8 @@ for nodes in data:
 #--------------------------------------------------------------------------#
 
 # Below code is just an illustarion for the code runner to see how the function works.
-try:
-    while True:
+while True:
+    try:
         opt = int(input("""
 Choose an option:
 1. Search for a node
@@ -114,5 +114,5 @@ Choose an option:
             exit()
         # else:
         #     pass
-except Exception as e:
-    print(e)
+    except Exception as e:
+        print(e)
