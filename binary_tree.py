@@ -33,7 +33,7 @@ class Node:
     # Function to search in the tree
     def search(self, value):
         if value == self.key:
-            print("Node is found")
+            print("Node found")
             return
         if value < self.key:
             if self.left:
