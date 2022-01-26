@@ -65,8 +65,8 @@ def preorder(root):
 
 
 def postorder(root):
+    # Left -> Right -> Root
     if root:
-        # Left -> Right -> Root
         inorder(root.left)
         inorder(root.right)
         print(root.key)
