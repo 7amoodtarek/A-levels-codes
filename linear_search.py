@@ -11,7 +11,7 @@ def linear_search(arr, e):
         print('Element not found')
 
 
-# Below code is just an illustarion for the code runner to see how the function works.
+# Below code is just an illustration for the code runner to see how the function works.
 a_list = [3, 1, 6, 98, 7]
 while True:
     try:
