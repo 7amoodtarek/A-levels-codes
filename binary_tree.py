@@ -48,28 +48,29 @@ class Node:
                 print("Node is not present in the tree")
 
 # Traversals:
-def inorder(root): 
+# r = root
+def inorder(r): 
     # Left -> Root -> Right
-    if root: 
-        inorder(root.left) 
-        print(root.key)
-        inorder(root.right)
+    if r: 
+        inorder(r.left) 
+        print(r.key)
+        inorder(r.right)
 
 
-def preorder(root): 
+def preorder(r): 
     # Root -> Left -> Right
-    if root: 
-        print(root.key)
-        inorder(root.left)
-        inorder(root.right)
+    if r: 
+        print(r.key)
+        preorder(r.left)
+        preorder(r.right)
 
 
-def postorder(root):
+def postorder(r):
     # Left -> Right -> Root
-    if root:
-        inorder(root.left)
-        inorder(root.right)
-        print(root.key)
+    if r:
+        postorder(r.left)
+        postorder(r.right)
+        print(r.key)
 
 
 root = Node(10)  # we can also set the root node manually
@@ -89,7 +90,7 @@ for nodes in data:
 #                          1                                               #
 #--------------------------------------------------------------------------#
 
-# Below code is just an illustarion for the code runner to see how the function works.
+# Below code is just an illustration for the code runner to see how the function works.
 while True:
     try:
         opt = int(input("""
