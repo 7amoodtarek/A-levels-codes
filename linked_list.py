@@ -18,7 +18,7 @@ def find(itemSearch):
     return itemPointer
 
  
-# Below code is just an illustarion for the code runner to see how the function works.
+# Below code is just an illustration for the code runner to see how the function works.
 item=int(input("Enter key to be searched:"))
 result=find(item)
 if result!=-1:
