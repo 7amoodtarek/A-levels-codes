@@ -23,7 +23,7 @@ def binary_search(arr, e):
         else:
             ub -= 1
 
-# Below code is just an illustarion for the code runner to see how the function works.
+# Below code is just an illustration for the code runner to see how the function works.
 a_list = [2, 4, 8, 16, 32, 64, 128]
 try:
     while True:
